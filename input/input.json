@@ -1,0 +1,11 @@
+{
+  "user": "Dang Hoang Nam",
+  "email": "dhn2001@gmail.com",
+  "age": 21,
+  "address": {
+    "road": "10 road 9",
+    "ward": "Tan Phong",
+    "district": "7",
+    "city": "Ho Chi Minh"
+  }
+}
