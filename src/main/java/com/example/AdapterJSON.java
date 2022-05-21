@@ -17,9 +17,5 @@ public class AdapterJSON {
             return e.toString();
         }
     }
-
-    public String WriteCSV() {
-        return CDL.rowToString(new JSONArray(json.getContent().replace("null", "")));
-    }
 }
 // Adapter
