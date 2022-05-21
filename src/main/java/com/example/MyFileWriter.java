@@ -4,16 +4,16 @@ import java.io.File;
 import java.io.IOException;
 import java.io.FileWriter;
 
-public class JSONWriter {
+public class MyFileWriter {
     private String outputFile;
 
-    public JSONWriter(String outputFile) {
+    public MyFileWriter(String outputFile) {
         this.outputFile = outputFile;
     }
 
-    public void Write(String jsonString) {
+    public void Write(String jsonString, String type) {
         try {
-            File dir = new File(outputFile.split("/output.json")[0]);
+            File dir = new File(outputFile.split("/output" + "." + type)[0]);
             if (!dir.exists()) {
                 dir.mkdir();
             }

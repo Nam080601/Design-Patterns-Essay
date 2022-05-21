@@ -9,11 +9,11 @@ public class Xml2Json extends Convert {
         String input = new File("input/input.xml").getAbsolutePath();
         String output = new File("output/output.json").getAbsolutePath();
 
-        XMLReader xmlReader = new XMLReader(input);
-        XMLAdapter xmlAdapter = new XMLAdapter(xmlReader);
-        JSONWriter jsonWriter = new JSONWriter(output);
+        MyFileReader xmlReader = new MyFileReader(input);
+        AdapterXML xmlAdapter = new AdapterXML(xmlReader);
+        MyFileWriter jsonWriter = new MyFileWriter(output);
 
-        jsonWriter.Write(xmlAdapter.ReadJSON());
+        jsonWriter.Write(xmlAdapter.WriteJSON(), "json");
     }
 
     @Override

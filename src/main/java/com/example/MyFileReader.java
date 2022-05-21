@@ -4,11 +4,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class JSONReader {
+public class MyFileReader {
     private String input;
     private String content;
 
-    public JSONReader(String input) {
+    public MyFileReader(String input) {
         this.input = input;
         ReadFile();
     }

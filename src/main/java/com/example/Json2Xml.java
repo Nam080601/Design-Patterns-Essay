@@ -9,11 +9,11 @@ public class Json2Xml extends Convert {
         String input = new File("input/input.json").getAbsolutePath();
         String output = new File("output/output.xml").getAbsolutePath();
 
-        JSONReader jsonReader = new JSONReader(input);
-        JSONAdapter jsonAdapter = new JSONAdapter(jsonReader);
-        XMLWriter xmlWriter = new XMLWriter(output);
+        MyFileReader jsonReader = new MyFileReader(input);
+        AdapterJSON jsonAdapter = new AdapterJSON(jsonReader);
+        MyFileWriter xmlWriter = new MyFileWriter(output);
 
-        xmlWriter.Write(jsonAdapter.ReadXML());
+        xmlWriter.Write(jsonAdapter.WriteXML(), "xml");
     }
 
     @Override

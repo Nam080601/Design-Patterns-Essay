@@ -2,14 +2,14 @@ package com.example;
 
 import org.json.*;
 
-public class XMLAdapter {
-    private XMLReader xml;
+public class AdapterXML {
+    private MyFileReader xml;
 
-    public XMLAdapter(XMLReader xml) {
+    public AdapterXML(MyFileReader xml) {
         this.xml = xml;
     }
 
-    public String ReadJSON() {
+    public String WriteJSON() {
         try {
             JSONObject json = XML.toJSONObject(xml.getContent());
             return json.toString(4);

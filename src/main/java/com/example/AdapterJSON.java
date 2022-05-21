@@ -2,20 +2,24 @@ package com.example;
 
 import org.json.*;
 
-public class JSONAdapter {
-    private JSONReader json;
+public class AdapterJSON {
+    private MyFileReader json;
 
-    public JSONAdapter(JSONReader json) {
+    public AdapterJSON(MyFileReader json) {
         this.json = json;
     }
 
-    public String ReadXML() {
+    public String WriteXML() {
         try {
             JSONObject jsonObj = new JSONObject(json.getContent().replace("null", ""));
             return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Root>" + XML.toString(jsonObj) + "</Root>";
         } catch (JSONException e) {
             return e.toString();
         }
+    }
+
+    public String WriteCSV() {
+        return CDL.rowToString(new JSONArray(json.getContent().replace("null", "")));
     }
 }
 // Adapter
