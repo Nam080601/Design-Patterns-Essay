@@ -10,7 +10,8 @@ public class App {
         String convertType = scanner.next();
         System.out.println("Convert type is : " + convertType.replace("2", " to ").toUpperCase());
         ConvertContext context = new ConvertContext();
-        ConvertFactory[] convertList = { new ConvertXml2JsonFactory(), new ConvertJson2XmlFactory() };
+        ConvertFactory[] convertList = { new ConvertXml2JsonFactory(), new ConvertJson2XmlFactory(),
+                new ConvertJson2CsvFactory(), new ConvertCsv2JsonFactory() };
 
         for (ConvertFactory convert : convertList) {
             if (!convert.getClass().getSimpleName().equalsIgnoreCase("Convert" + convertType + "Factory")) {

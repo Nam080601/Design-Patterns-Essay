@@ -5,6 +5,11 @@ import java.io.File;
 public class Json2Xml extends Convert {
 
     @Override
+    public void PrintStart() {
+        System.out.println("Staring convert JSON to XML!");
+    }
+
+    @Override
     public void WriteFile() {
         String input = new File("input/input.json").getAbsolutePath();
         String output = new File("output/output.xml").getAbsolutePath();
@@ -17,7 +22,7 @@ public class Json2Xml extends Convert {
     }
 
     @Override
-    public void Print() {
+    public void PrintEnd() {
         System.out.println("Convert JSON to XML complete!");
     }
 

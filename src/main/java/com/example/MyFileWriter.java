@@ -11,7 +11,7 @@ public class MyFileWriter {
         this.outputFile = outputFile;
     }
 
-    public void Write(String jsonString, String type) {
+    public void Write(String outputContent, String type) {
         try {
             File dir = new File(outputFile.split("/output" + "." + type)[0]);
             if (!dir.exists()) {
@@ -25,7 +25,7 @@ public class MyFileWriter {
 
         try {
             FileWriter fileWriter = new FileWriter(outputFile);
-            fileWriter.write(jsonString);
+            fileWriter.write(outputContent);
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();

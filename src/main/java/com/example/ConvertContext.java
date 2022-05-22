@@ -8,8 +8,9 @@ public class ConvertContext {
     }
 
     public void Execute() {
+        convert.PrintStart();
         convert.WriteFile();
-        convert.Print();
+        convert.PrintEnd();
     }
 }
 // Strategy

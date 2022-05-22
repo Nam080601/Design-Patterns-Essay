@@ -8,9 +8,14 @@ public abstract class ConvertFactory {
         convert.WriteFile();
     }
 
-    public void Print() {
+    public void PrintStart() {
         Convert convert = getConvert();
-        convert.Print();
+        convert.PrintStart();
+    }
+
+    public void PrintEnd() {
+        Convert convert = getConvert();
+        convert.PrintEnd();
     }
 }
 // Factory methods

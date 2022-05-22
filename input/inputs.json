@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "user": "Dang Hoang Nam",
+      "email": "dhn2001@gmail.com",
+      "age": 21,
+      "address": "10 duong 9, Tan Phong, Quan 7, TP.Ho Chi Minh"
+    },
+    {
+      "user": "Le Tuan Anh",
+      "email": "lta2001@gmail.com",
+      "age": 21,
+      "address": "10 duong 9, Tan Phong, Quan 7, TP.Ho Chi Minh"
+    },
+    {
+      "user": "Dinh Nguyen Thanh Tuyen",
+      "email": "dntt2001@gmail.com",
+      "age": 21,
+      "address": "123 Nguyen Huu Tho, Phuoc Kien, Huyen Nha Be, TP.Ho Chi Minh"
+    }
+  ]
+}

@@ -17,5 +17,15 @@ public class AdapterJSON {
             return e.toString();
         }
     }
+
+    public String WriteCSV() {
+        try {
+            JSONObject jsonObj = new JSONObject(json.getContent().replace("null", ""));
+            JSONArray docs = jsonObj.getJSONArray("data");
+            return CDL.toString(docs);
+        } catch (JSONException e) {
+            return e.toString();
+        }
+    }
 }
 // Adapter
