@@ -19,6 +19,7 @@
 _Người hướng dẫn:_ **Thầy Đặng Huỳnh Trung Tín** <br>
 _Người thực hiện:_ **Đặng Hoàng Nam - 51900708** <br>
 **Lê Tuấn Anh - 51900698** <br>
+**Đinh Nguyễn Thanh Tuyền - 51900617** <br>
 _Khóa:_ **23**
 
 </div>
@@ -41,6 +42,11 @@ _Khóa:_ **23**
       - [4.1.1 <b>Giới thiệu: </b>](#411-bgiới-thiệu-b)
       - [4.1.2 <b>Lý do sử dụng:</b>](#412-blý-do-sử-dụngb)
       - [4.1.3 <b>Class Diagram</b>](#413-bclass-diagramb)
+    - [4.2 Pattern Facroty](#42-pattern-facroty)
+    - [4.3 Pattern Adapter](#43-pattern-adapter)
+      - [4.3.1 <b>Giới thiệu: </b>](#431-bgiới-thiệu-b)
+      - [4.3.2 <b>Lý do sử dụng:</b>](#432-blý-do-sử-dụngb)
+      - [4.3.3 <b>Class Diagram</b>](#433-bclass-diagramb)
 
 ---
 
@@ -76,3 +82,18 @@ Do đó, nhóm chúng em đã nghiên cứu, phát triển và áp dụng các d
 
 ![MarineGEO circle logo](./Strategy.png "Strategy Class Diagram")
 </div>
+
+
+#### 4.2 Pattern Facroty
+
+#### 4.3 Pattern Adapter 
+##### 4.3.1 <b>Giới thiệu: </b>
+ - Adapter Pattern là một trong những Pattern thuộc nhóm cấu trúc (Structural Pattern). 
+ - Adapter Pattern đóng vai trò trung gian, tương thích cho hệ thống sẵn có đối ứng với các component mới mà không cần phải sửa đổi code, cho phép các interface không liên quan đến nhau có thể làm việc cùng nhau.
+
+##### 4.3.2 <b>Lý do sử dụng:</b>
+ - Sử dụng và nâng cấp một hệ thống mới và không muốn đụng vào mô hình của các thế hệ trước kia. 
+ - Cần phải có sự chuyển đổi interface từ nhiều nguồn khác nhau.
+ - Cần đảm bảo nguyên tắc Open/ Close trong một ứng dụng.
+ - Tạo ra những lớp có khả năng sử dụng lại, chúng phối hợp với các lớp không liên quan hay những lớp không thể đoán trước được và những lớp này không có những interface tương thích.
+##### 4.3.3 <b>Class Diagram</b>
