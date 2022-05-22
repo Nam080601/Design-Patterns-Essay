@@ -35,14 +35,12 @@ _Khóa:_ **23**
   - [1. GIỚI THIỆU VỀ ỨNG DỤNG](#1-giới-thiệu-về-ứng-dụng)
   - [2. YÊU CẦU](#2-yêu-cầu)
     - [2.1 Thư viện JSON-Java (org.json)](#21-thư-viện-json-java-orgjson)
-    - [2.2 Thư viện image4j](#22-thư-viện-image4j)
   - [3. CÁCH THỰC THI ỨNG DỤNG](#3-cách-thực-thi-ứng-dụng)
-  - [4. Kiến thức cơ bản](#4-kiến-thức-cơ-bản)
+  - [4. KIẾN THỨC CƠ BẢN](#4-kiến-thức-cơ-bản)
     - [4.1 Pattern Stategy](#41-pattern-stategy)
       - [4.1.1 <b>Giới thiệu: </b>](#411-bgiới-thiệu-b)
       - [4.1.2 <b>Lý do sử dụng:</b>](#412-blý-do-sử-dụngb)
       - [4.1.3 <b>Class Diagram</b>](#413-bclass-diagramb)
-    - [4.2 Pattern Singleton](#42-pattern-singleton)
 
 ---
 
@@ -58,11 +56,9 @@ Do đó, nhóm chúng em đã nghiên cứu, phát triển và áp dụng các d
 
 #### 2.1 Thư viện JSON-Java (org.json)
 
-#### 2.2 Thư viện image4j
-
 ### 3. CÁCH THỰC THI ỨNG DỤNG
 
-### 4. Kiến thức cơ bản
+### 4. KIẾN THỨC CƠ BẢN
 #### 4.1 Pattern Stategy
 ##### 4.1.1 <b>Giới thiệu: </b>
  - Strategy Pattern là một trong những Pattern thuộc nhóm hành vi (Behavior Pattern). 
@@ -80,6 +76,3 @@ Do đó, nhóm chúng em đã nghiên cứu, phát triển và áp dụng các d
 
 ![MarineGEO circle logo](./Strategy.png "Strategy Class Diagram")
 </div>
-
-
-#### 4.2 Pattern Singleton
