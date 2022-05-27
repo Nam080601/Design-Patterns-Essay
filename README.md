@@ -60,11 +60,12 @@ _Khóa:_ **23**
       - [4.4.1 Giới thiệu](#441-giới-thiệu)
       - [4.4.2 Lý do sử dụng](#442-lý-do-sử-dụng)
   - [5. TRIỂN KHAI ỨNG DỤNG](#5-triển-khai-ứng-dụng)
-    - [5.1 Chi tiết ứng dụng](#51-chi-tiết-ứng-dụng)
-      - [5.1.1 Ngôn ngữ lập trình](#511-ngôn-ngữ-lập-trình)
-      - [5.1.2 Cấu trúc thư mục](#512-cấu-trúc-thư-mục)
-    - [5.2 Pattern](#52-pattern)
-    - [5.3 Class Diagram](#53-class-diagram)
+    - [5.1 Chức năng ứng dụng](#51-chức-năng-ứng-dụng)
+    - [5.2 Chi tiết ứng dụng](#52-chi-tiết-ứng-dụng)
+      - [5.2.1 Ngôn ngữ lập trình](#521-ngôn-ngữ-lập-trình)
+      - [5.2.2 Cấu trúc thư mục](#522-cấu-trúc-thư-mục)
+    - [5.3 Pattern](#53-pattern)
+    - [5.4 Class Diagram](#54-class-diagram)
   - [6. KẾT QUẢ THỰC TẾ](#6-kết-quả-thực-tế)
   - [THÔNG TIN NGƯỜI PHÁT TRIỀN](#thông-tin-người-phát-triền)
 
@@ -98,7 +99,7 @@ Do đó, nhóm chúng em đã nghiên cứu, phát triển và áp dụng các d
 
 #### 3.2 Truy cập App.java
 
- - Đường dẫn: /src/main/java/com/example/App.java
+ - Đường dẫn: **/src/main/java/com/example/App.java**
 
 #### 3.3 Chọn Run Java
 
@@ -107,10 +108,10 @@ Do đó, nhóm chúng em đã nghiên cứu, phát triển và áp dụng các d
  - Copy tập tin input vào thư mục input
 
  - Nhập lệnh chuyển đổi:
-   - json2xml: json to xml
-   - xml2json: xml to json
-   - json2csv: json to csv
-   - csv2json: csv to json
+   - `json2xml`: json to xml
+   - `xml2json`: xml to json
+   - `json2csv`: json to csv
+   - `csv2json`: csv to jsosn
 
  - Ứng dụng trả kết quả qua thư mục output
 
@@ -171,27 +172,87 @@ Do đó, nhóm chúng em đã nghiên cứu, phát triển và áp dụng các d
 
 ### 5. TRIỂN KHAI ỨNG DỤNG
 
-#### 5.1 Chi tiết ứng dụng
+#### 5.1 Chức năng ứng dụng
+ - Ứng dụng chuyển đổi đuôi file này sang đuôi file khác cùng chức năng
+ - Cụ thể ứng dụng chuyển đổi file dữ liệu: .json sang .xml và .csv; .xml và .csv sang .json
 
-##### 5.1.1 Ngôn ngữ lập trình
+#### 5.2 Chi tiết ứng dụng
+
+##### 5.2.1 Ngôn ngữ lập trình
 
  - Java
 
-##### 5.1.2 Cấu trúc thư mục
+##### 5.2.2 Cấu trúc thư mục
 
-
-
-#### 5.2 Pattern
-
-#### 5.3 Class Diagram
+ - **input**: Thư mục đặt file đầu vào cần chuyển đổi
+ - **output**: Thư mục lấy file đầu ra đã chuyển đổi
+ - **src**: Thư mục chứa toàn bộ source code
+ - **target**: Thư mục chưa file compile
+ - **pom.xml**: File khai báo tất cả những gì liên quan đến dự án và thư viện
+ - **README.md**: File báo cáo
 
 <div align="center">
 
-<img src="https://files-provider.up.railway.app/strategy.png" alt="Class Diagram" width="500">
+<img src="https://files-provider.up.railway.app/file-structure.png" alt="Class Diagram" width="300">
+
+Hình 1: Folder Structure
+
+</div>
+
+#### 5.3 Pattern
+
+ - ***Strategy***
+   - ConvertContext.java
+ - ***Template Method***
+   - Convert.java
+   - Json2Csv.java
+   - Json2Xml.java
+   - Xml2Json.java
+   - Csv2Json.java
+ - ***Abstract Factory***
+   - ConvertFactory.java
+   - ConvertCsv2JsonFactory.java
+   - ConvertJson2CsvFactory.java
+   - ConvertJson2XmlFactory.java
+   - ConvertXml2JsonFactory.java
+ - ***Adapter***
+   - Adapter.java
+   - AdapterCSV.java
+   - AdapterJSON.Java
+   - AdapterXML.java
+
+#### 5.4 Class Diagram
+
+<div align="center">
+
+<img src="https://files-provider.up.railway.app/class-diagram.png" alt="Class Diagram" width="1000">
+
+Hình 2: Class Diagram
 
 </div>
 
 ### 6. KẾT QUẢ THỰC TẾ
+
+<div align="center">
+
+<img src="https://files-provider.up.railway.app/result1.png" alt="Class Diagram" width="1000">
+
+Hình 3: Kết quả JSON to XML
+
+<img src="https://files-provider.up.railway.app/result2.png" alt="Class Diagram" width="1000">
+
+Hình 4: Kết quả XML to JSON
+
+<img src="https://files-provider.up.railway.app/result3.png" alt="Class Diagram" width="1000">
+
+Hình 5: Kết quả JSON to CSV
+
+<img src="https://files-provider.up.railway.app/result4.png" alt="Class Diagram" width="1000">
+
+Hình 6: Kết quả CSV to JSON
+
+</div>
+
 
 ### THÔNG TIN NGƯỜI PHÁT TRIỀN
 
