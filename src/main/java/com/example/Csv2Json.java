@@ -15,10 +15,10 @@ public class Csv2Json extends Convert {
         String output = new File("output/output.json").getAbsolutePath();
 
         MyFileReader csvReader = new MyFileReader(input);
-        AdapterCSV csvAdapter = new AdapterCSV(csvReader);
+        Adapter csvAdapter = new AdapterCSV(csvReader);
         MyFileWriter jsonWriter = new MyFileWriter(output);
 
-        jsonWriter.Write(csvAdapter.WriteJSON(), "json");
+        jsonWriter.Write(csvAdapter.Write("JSON"), "json");
     }
 
     @Override

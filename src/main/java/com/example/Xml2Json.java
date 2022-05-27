@@ -18,7 +18,7 @@ public class Xml2Json extends Convert {
         AdapterXML xmlAdapter = new AdapterXML(xmlReader);
         MyFileWriter jsonWriter = new MyFileWriter(output);
 
-        jsonWriter.Write(xmlAdapter.WriteJSON(), "json");
+        jsonWriter.Write(xmlAdapter.Write("JSON"), "json");
     }
 
     @Override
